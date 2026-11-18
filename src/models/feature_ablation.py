@@ -38,12 +38,15 @@ def load_features(path, poisoned=False):
 
 
 def ablation_cases(columns):
+    qber_bins = [feature for feature in columns if feature.startswith("frac_qber_")]
+    goodness_of_fit = ["chi2_stat", "ks_stat"]
     yield "all_features", []
     for feature in columns:
         yield f"drop_{feature}", [feature]
     yield "drop_qber_moments", ["mean_qber", "std_qber", "skew_qber", "kurtosis_qber"]
-    yield "drop_qber_bins", [feature for feature in columns if feature.startswith("frac_qber_")]
-    yield "drop_goodness_of_fit", ["chi2_stat", "ks_stat"]
+    yield "drop_qber_bins", qber_bins
+    yield "drop_goodness_of_fit", goodness_of_fit
+    yield "drop_qber_bins_and_goodness_of_fit", qber_bins + goodness_of_fit
 
 
 def paired_samples(clean, poisoned, group_indices):

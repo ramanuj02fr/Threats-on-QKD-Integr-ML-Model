@@ -5,3 +5,4 @@ __pycache__/
 CICIDS2017/
 
 .venv/
+*.ipynb
