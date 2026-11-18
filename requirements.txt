@@ -1,5 +1,8 @@
 qiskit
 qiskit-aer
+numpy
+pandas
+matplotlib
 matplotlib
 pandas
 scikit-learn

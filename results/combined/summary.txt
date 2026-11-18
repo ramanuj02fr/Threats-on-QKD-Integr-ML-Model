@@ -1,0 +1,42 @@
+Models found: Random Forest, Gradient Boosting, Logistic Regression, SVM, KNN, Neural Network
+Model-runs: 120
+Approaches: A, B, C, D
+Poisoning levels: 10, 20, 30, 40, 50%
+
+Overall metric summary:
+                    accuracy                          auc                      seconds                         
+                        mean     std     min  max    mean     std     min  max    mean     std     min      max
+model                                                                                                          
+Random Forest         0.9884  0.0372  0.8340  1.0  0.9949  0.0206  0.9076  1.0  0.3883  0.1103  0.2863   0.6491
+Gradient Boosting     0.9887  0.0363  0.8382  1.0  0.9954  0.0191  0.9144  1.0  4.4223  1.8260  3.1728   7.5158
+Logistic Regression   0.9887  0.0360  0.8394  1.0  0.9955  0.0188  0.9155  1.0  0.0247  0.0046  0.0202   0.0377
+SVM                   0.9886  0.0368  0.8359  1.0  0.9948  0.0216  0.9033  1.0  1.6124  4.7108  0.0532  21.1841
+KNN                   0.9864  0.0436  0.8056  1.0  0.9922  0.0290  0.8696  1.0  0.5687  0.2025  0.3184   1.1083
+Neural Network        0.9886  0.0362  0.8389  1.0  0.9954  0.0191  0.9145  1.0  0.5843  0.1450  0.4694   1.0094
+
+Lowest poisoning-level results:
+approach  poison_pct               model  accuracy    auc  seconds
+       A          10       Random Forest    1.0000 1.0000   0.3140
+       A          10   Gradient Boosting    1.0000 1.0000   3.3144
+       A          10 Logistic Regression    1.0000 1.0000   0.0325
+       A          10                 SVM    1.0000 1.0000   0.1391
+       A          10                 KNN    1.0000 1.0000   0.3184
+       A          10      Neural Network    1.0000 1.0000   0.4913
+       B          10 Logistic Regression    0.8394 0.9155   0.0377
+       B          10      Neural Network    0.8389 0.9145   1.0094
+       B          10   Gradient Boosting    0.8382 0.9144   7.5158
+       B          10       Random Forest    0.8340 0.9076   0.6491
+       B          10                 SVM    0.8359 0.9033  21.1841
+       B          10                 KNN    0.8056 0.8696   1.1083
+       C          10 Logistic Regression    0.9798 0.9984   0.0288
+       C          10   Gradient Boosting    0.9800 0.9983   7.4479
+       C          10      Neural Network    0.9789 0.9983   0.7224
+       C          10                 SVM    0.9800 0.9981   2.2649
+       C          10       Random Forest    0.9792 0.9977   0.5430
+       C          10                 KNN    0.9759 0.9929   0.7775
+       D          10 Logistic Regression    0.9878 0.9993   0.0267
+       D          10   Gradient Boosting    0.9880 0.9993   7.3503
+       D          10      Neural Network    0.9876 0.9992   0.7932
+       D          10                 SVM    0.9870 0.9991   1.8824
+       D          10       Random Forest    0.9871 0.9988   0.5179
+       D          10                 KNN    0.9855 0.9955   0.7638
